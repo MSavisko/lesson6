@@ -16,15 +16,15 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *logLabel;
-@property (nonatomic) int scoreCount;
+@property (nonatomic) NSInteger scoreCount;
 
 @end
 
 @implementation ViewController
 
-- (void) setScoreCount:(int)scoreCount {
+- (void) setScoreCount:(NSInteger)scoreCount {
     _scoreCount = scoreCount;
-    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.scoreCount];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %ld", (long)self.scoreCount];
 }
 
 - (Game *)game {
