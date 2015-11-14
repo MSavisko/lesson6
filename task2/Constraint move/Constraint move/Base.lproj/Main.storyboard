@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cog-cc-cfO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="c9L-9a-NgH">
+            <objects>
+                <tabBarController id="Cog-cc-cfO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="OdY-7x-cEb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nmf-4b-32i" kind="relationship" relationship="viewControllers" id="rAM-cj-Xjp"/>
+                        <segue destination="fr3-PS-zGB" kind="relationship" relationship="viewControllers" id="E1X-K7-laZ"/>
+                        <segue destination="VVQ-JU-D5I" kind="relationship" relationship="viewControllers" id="hNY-4A-SUT"/>
+                        <segue destination="yY6-gf-kC5" kind="relationship" relationship="viewControllers" id="I4x-6g-qv7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmK-hJ-8YS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="-698"/>
+        </scene>
+        <!--Third-->
+        <scene sceneID="sHy-Kl-2Cx">
+            <objects>
+                <viewController id="VVQ-JU-D5I" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ovd-PL-oEI"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Fm-EV-1Ev"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QL0-EW-zXY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" id="YPI-us-8Am"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5m-YZ-CSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="-1152"/>
+        </scene>
+        <!--Fourth-->
+        <scene sceneID="B0M-4N-skH">
+            <objects>
+                <viewController id="yY6-gf-kC5" customClass="FourthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QEZ-Sc-HSH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hwp-i3-TUV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NQW-OD-4xB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fourth" id="wfV-UJ-0HA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hRU-U6-6mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="-441"/>
+        </scene>
+        <!--First-->
+        <scene sceneID="mUr-hf-qG0">
+            <objects>
+                <viewController id="nmf-4b-32i" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r0S-me-YeH"/>
+                        <viewControllerLayoutGuide type="bottom" id="aok-c0-Cu0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LH3-Ba-UKL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3r-IE-kcF">
+                                <rect key="frame" x="45" y="211" width="510" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-Cx-hOO">
+                                <rect key="frame" x="43" y="422" width="514" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="First" id="sy6-1d-SZf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nxp-bc-gzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="-1386"/>
+        </scene>
+        <!--Second-->
+        <scene sceneID="tvl-Dl-EeW">
+            <objects>
+                <viewController id="fr3-PS-zGB" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pgb-cu-SbQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="UeN-gt-Qfg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KVQ-mt-jbO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-5s-nnM">
+                                <rect key="frame" x="20" y="28" width="280" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pDV-Ij-2KA">
+                                <rect key="frame" x="18" y="429" width="284" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Second" id="yHJ-zT-kLf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ieX-hQ-ZuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="-119"/>
+        </scene>
+    </scenes>
+</document>
