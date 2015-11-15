@@ -9,6 +9,8 @@
 #import "ThirdViewController.h"
 
 @interface ThirdViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *greenBlockWidth;
 
 @end
 
@@ -16,12 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.slider.maximumValue = self.view.frame.size.width * 0.5;
+    self.slider.minimumValue = self.view.frame.size.width * 0.05;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)changeGreenBlockWidth:(id)sender {
+    self.greenBlockWidth.constant = self.slider.value;
 }
 
 /*

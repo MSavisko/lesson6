@@ -37,9 +37,64 @@
                     <view key="view" contentMode="scaleToFill" id="QL0-EW-zXY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-gE-AKr">
+                                <rect key="frame" x="60" y="211" width="206" height="177"/>
+                                <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="S7i-fe-Iu0"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mMy-8X-mMH">
+                                <rect key="frame" x="43" y="496" width="514" height="31"/>
+                                <connections>
+                                    <action selector="changeGreenBlockWidth:" destination="VVQ-JU-D5I" eventType="valueChanged" id="xxe-pY-NvM"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mT0-cg-cmY">
+                                <rect key="frame" x="274" y="211" width="53" height="177"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="4Y6-Xa-eWI"/>
+                                    <constraint firstAttribute="height" constant="177" id="gsk-45-CE1"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTj-Hd-hmn">
+                                <rect key="frame" x="335" y="211" width="205" height="177"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="7f3-Gn-x6X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mT0-cg-cmY" firstAttribute="centerX" secondItem="QL0-EW-zXY" secondAttribute="centerX" id="AZl-oY-JYd"/>
+                            <constraint firstItem="mT0-cg-cmY" firstAttribute="leading" secondItem="4HV-gE-AKr" secondAttribute="trailing" constant="8" id="BII-uS-x90"/>
+                            <constraint firstItem="lTj-Hd-hmn" firstAttribute="centerY" secondItem="QL0-EW-zXY" secondAttribute="centerY" id="C3V-vF-XWG"/>
+                            <constraint firstItem="mT0-cg-cmY" firstAttribute="centerY" secondItem="QL0-EW-zXY" secondAttribute="centerY" id="QeM-Fq-hhl"/>
+                            <constraint firstItem="2Fm-EV-1Ev" firstAttribute="top" secondItem="mMy-8X-mMH" secondAttribute="bottom" constant="25" id="Riq-8O-B8V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mMy-8X-mMH" secondAttribute="trailing" constant="25" id="Xq8-ey-ReU"/>
+                            <constraint firstItem="4HV-gE-AKr" firstAttribute="leading" secondItem="QL0-EW-zXY" secondAttribute="leadingMargin" constant="40" id="Y0p-es-bXe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lTj-Hd-hmn" secondAttribute="trailing" constant="40" id="YJW-m6-KRT"/>
+                            <constraint firstItem="lTj-Hd-hmn" firstAttribute="leading" secondItem="mT0-cg-cmY" secondAttribute="trailing" constant="8" id="mzN-IP-TGC"/>
+                            <constraint firstItem="mMy-8X-mMH" firstAttribute="leading" secondItem="QL0-EW-zXY" secondAttribute="leadingMargin" constant="25" id="s25-WI-dVi"/>
+                            <constraint firstItem="lTj-Hd-hmn" firstAttribute="top" secondItem="4HV-gE-AKr" secondAttribute="top" id="wRN-aq-Nwn"/>
+                            <constraint firstItem="lTj-Hd-hmn" firstAttribute="bottom" secondItem="4HV-gE-AKr" secondAttribute="bottom" id="wTP-Y7-Bge"/>
+                            <constraint firstItem="4HV-gE-AKr" firstAttribute="centerY" secondItem="QL0-EW-zXY" secondAttribute="centerY" id="yd1-az-lr5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wRN-aq-Nwn"/>
+                                <exclude reference="wTP-Y7-Bge"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" id="YPI-us-8Am"/>
+                    <connections>
+                        <outlet property="greenBlockWidth" destination="4Y6-Xa-eWI" id="dV9-ax-LNZ"/>
+                        <outlet property="slider" destination="mMy-8X-mMH" id="9vd-gY-a17"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5m-YZ-CSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
