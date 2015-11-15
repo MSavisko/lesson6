@@ -79,16 +79,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lTj-Hd-hmn" secondAttribute="trailing" constant="40" id="YJW-m6-KRT"/>
                             <constraint firstItem="lTj-Hd-hmn" firstAttribute="leading" secondItem="mT0-cg-cmY" secondAttribute="trailing" constant="8" id="mzN-IP-TGC"/>
                             <constraint firstItem="mMy-8X-mMH" firstAttribute="leading" secondItem="QL0-EW-zXY" secondAttribute="leadingMargin" constant="25" id="s25-WI-dVi"/>
-                            <constraint firstItem="lTj-Hd-hmn" firstAttribute="top" secondItem="4HV-gE-AKr" secondAttribute="top" id="wRN-aq-Nwn"/>
-                            <constraint firstItem="lTj-Hd-hmn" firstAttribute="bottom" secondItem="4HV-gE-AKr" secondAttribute="bottom" id="wTP-Y7-Bge"/>
                             <constraint firstItem="4HV-gE-AKr" firstAttribute="centerY" secondItem="QL0-EW-zXY" secondAttribute="centerY" id="yd1-az-lr5"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="wRN-aq-Nwn"/>
-                                <exclude reference="wTP-Y7-Bge"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Third" id="YPI-us-8Am"/>
                     <connections>
@@ -111,9 +103,81 @@
                     <view key="view" contentMode="scaleToFill" id="NQW-OD-4xB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kun-Mk-vPR">
+                                <rect key="frame" x="43" y="496" width="514" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AHS-E1-7jE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeContainerHeight:" destination="yY6-gf-kC5" eventType="valueChanged" id="Xxd-CQ-Thl"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cqV-cy-J20">
+                                <rect key="frame" x="43" y="441" width="514" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="tYB-yA-NUP"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeContainerWeight:" destination="yY6-gf-kC5" eventType="valueChanged" id="wbV-xX-4M0"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lj4-8W-Iid">
+                                <rect key="frame" x="220" y="28" width="160" height="193"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5x-hb-36w">
+                                        <rect key="frame" x="0.0" y="80" width="105" height="113"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-4b-vbb">
+                                        <rect key="frame" x="105" y="80" width="55" height="113"/>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-XX-O7T">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4wg-XX-O7T" firstAttribute="height" secondItem="Lj4-8W-Iid" secondAttribute="height" constant="-113" id="83a-Mf-GOr"/>
+                                    <constraint firstItem="6kN-4b-vbb" firstAttribute="leading" secondItem="F5x-hb-36w" secondAttribute="trailing" id="Alo-va-dmd"/>
+                                    <constraint firstItem="4wg-XX-O7T" firstAttribute="top" secondItem="Lj4-8W-Iid" secondAttribute="top" id="EcY-HH-nWw"/>
+                                    <constraint firstItem="6kN-4b-vbb" firstAttribute="top" secondItem="4wg-XX-O7T" secondAttribute="bottom" id="GUK-fJ-nuu"/>
+                                    <constraint firstItem="4wg-XX-O7T" firstAttribute="leading" secondItem="Lj4-8W-Iid" secondAttribute="leading" id="H4U-oZ-Yro"/>
+                                    <constraint firstAttribute="width" constant="160" id="LXR-hJ-TbY"/>
+                                    <constraint firstAttribute="bottom" secondItem="F5x-hb-36w" secondAttribute="bottom" id="Wdz-bF-Dz6"/>
+                                    <constraint firstItem="6kN-4b-vbb" firstAttribute="width" secondItem="Lj4-8W-Iid" secondAttribute="width" constant="-105" id="Wyf-9K-TFc"/>
+                                    <constraint firstAttribute="bottom" secondItem="6kN-4b-vbb" secondAttribute="bottom" id="XnJ-fw-H7Z"/>
+                                    <constraint firstItem="F5x-hb-36w" firstAttribute="top" secondItem="4wg-XX-O7T" secondAttribute="bottom" id="YZg-el-fL1"/>
+                                    <constraint firstAttribute="height" constant="193" id="cNu-XK-TQ6"/>
+                                    <constraint firstItem="F5x-hb-36w" firstAttribute="leading" secondItem="Lj4-8W-Iid" secondAttribute="leading" id="ctk-t0-zbD"/>
+                                    <constraint firstAttribute="trailing" secondItem="6kN-4b-vbb" secondAttribute="trailing" id="ftt-8l-A0m"/>
+                                    <constraint firstItem="6kN-4b-vbb" firstAttribute="top" secondItem="4wg-XX-O7T" secondAttribute="bottom" id="urW-hf-HNJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4wg-XX-O7T" secondAttribute="trailing" id="w7t-QC-e3P"/>
+                                    <constraint firstItem="6kN-4b-vbb" firstAttribute="leading" secondItem="F5x-hb-36w" secondAttribute="trailing" id="wpO-MT-gKd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kun-Mk-vPR" firstAttribute="leading" secondItem="NQW-OD-4xB" secondAttribute="leadingMargin" constant="25" id="ARF-1O-xaF"/>
+                            <constraint firstItem="Hwp-i3-TUV" firstAttribute="top" secondItem="kun-Mk-vPR" secondAttribute="bottom" constant="25" id="F2J-4O-Vvi"/>
+                            <constraint firstItem="Lj4-8W-Iid" firstAttribute="top" secondItem="QEZ-Sc-HSH" secondAttribute="bottom" constant="8" id="Ijl-n7-qDa"/>
+                            <constraint firstItem="kun-Mk-vPR" firstAttribute="top" secondItem="cqV-cy-J20" secondAttribute="bottom" constant="25" id="Paq-It-J4s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kun-Mk-vPR" secondAttribute="trailing" constant="25" id="glh-mk-PvD"/>
+                            <constraint firstItem="cqV-cy-J20" firstAttribute="leading" secondItem="NQW-OD-4xB" secondAttribute="leadingMargin" constant="25" id="kzh-Ad-HQ6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cqV-cy-J20" secondAttribute="trailing" constant="25" id="oHl-hg-5tt"/>
+                            <constraint firstItem="Lj4-8W-Iid" firstAttribute="centerX" secondItem="NQW-OD-4xB" secondAttribute="centerX" id="xcf-WY-ZaH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fourth" id="wfV-UJ-0HA"/>
+                    <connections>
+                        <outlet property="containerViewHeight" destination="cNu-XK-TQ6" id="XkZ-N4-4Sz"/>
+                        <outlet property="containerViewWeight" destination="LXR-hJ-TbY" id="n0U-Rv-2J6"/>
+                        <outlet property="heightSlider" destination="kun-Mk-vPR" id="1AE-Uk-B5u"/>
+                        <outlet property="weightSlider" destination="cqV-cy-J20" id="xvM-y8-3vB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRU-U6-6mf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,11 @@
 #import "FourthViewController.h"
 
 @interface FourthViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *weightSlider;
+@property (weak, nonatomic) IBOutlet UISlider *heightSlider;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewWeight;
+
 
 @end
 
@@ -16,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.weightSlider.maximumValue = self.view.frame.size.width;
+    self.weightSlider.minimumValue = self.view.frame.size.width * 0.4;
+    self.heightSlider.maximumValue = self.view.frame.size.height * 0.7;
+    self.heightSlider.minimumValue = self.view.frame.size.height * 0.3;
     // Do any additional setup after loading the view.
 }
 
@@ -23,6 +32,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)changeContainerWeight:(id)sender {
+    self.containerViewWeight.constant = self.weightSlider.value;
+}
+- (IBAction)changeContainerHeight:(id)sender {
+    self.containerViewHeight.constant = self.heightSlider.value;
+}
+
+
 
 /*
 #pragma mark - Navigation
