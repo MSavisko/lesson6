@@ -9,6 +9,8 @@
 #import "SecondViewController.h"
 
 @interface SecondViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeight;
 
 @end
 
@@ -16,12 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.slider.maximumValue = self.view.frame.size.height * 0.8;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)changeViewHeight:(id)sender {
+    self.textViewHeight.constant = self.slider.maximumValue - self.slider.value;
 }
 
 /*

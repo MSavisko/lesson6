@@ -77,7 +77,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-Cx-hOO">
-                                <rect key="frame" x="43" y="498" width="514" height="31"/>
+                                <rect key="frame" x="43" y="496" width="514" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FTo-wg-6PJ"/>
                                 </constraints>
@@ -100,7 +100,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QV7-Cx-hOO" secondAttribute="trailing" constant="25" id="HZa-BD-6zy"/>
                             <constraint firstItem="Q3r-IE-kcF" firstAttribute="centerY" secondItem="LH3-Ba-UKL" secondAttribute="centerY" id="jMa-bz-Usu"/>
                             <constraint firstItem="QV7-Cx-hOO" firstAttribute="leading" secondItem="LH3-Ba-UKL" secondAttribute="leadingMargin" constant="25" id="pS2-yz-7cc"/>
-                            <constraint firstItem="aok-c0-Cu0" firstAttribute="top" secondItem="QV7-Cx-hOO" secondAttribute="bottom" constant="23" id="ryF-OF-Arj"/>
+                            <constraint firstItem="aok-c0-Cu0" firstAttribute="top" secondItem="QV7-Cx-hOO" secondAttribute="bottom" constant="25" id="ryF-OF-Arj"/>
                             <constraint firstItem="Q3r-IE-kcF" firstAttribute="leading" secondItem="LH3-Ba-UKL" secondAttribute="leadingMargin" constant="25" id="sOV-ef-nEs"/>
                         </constraints>
                     </view>
@@ -126,20 +126,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-5s-nnM">
-                                <rect key="frame" x="20" y="28" width="280" height="260"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pDV-Ij-2KA">
+                                <rect key="frame" x="43" y="496" width="514" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="quK-85-7kX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeViewHeight:" destination="fr3-PS-zGB" eventType="valueChanged" id="OKH-DP-SRo"/>
+                                </connections>
+                            </slider>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-5s-nnM">
+                                <rect key="frame" x="45" y="46" width="510" height="286"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</string>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="286" id="WYV-mP-GNl"/>
+                                </constraints>
+                                <string key="text">Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pDV-Ij-2KA">
-                                <rect key="frame" x="18" y="429" width="284" height="31"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nVQ-5s-nnM" secondAttribute="trailing" constant="25" id="3LE-Co-ico"/>
+                            <constraint firstItem="pDV-Ij-2KA" firstAttribute="leading" secondItem="KVQ-mt-jbO" secondAttribute="leadingMargin" constant="25" id="Anx-p1-DWQ"/>
+                            <constraint firstItem="nVQ-5s-nnM" firstAttribute="top" secondItem="pgb-cu-SbQ" secondAttribute="bottom" constant="26" id="NFM-bJ-1Yi"/>
+                            <constraint firstItem="UeN-gt-Qfg" firstAttribute="top" secondItem="pDV-Ij-2KA" secondAttribute="bottom" constant="25" id="NTA-BX-4zy"/>
+                            <constraint firstItem="nVQ-5s-nnM" firstAttribute="leading" secondItem="KVQ-mt-jbO" secondAttribute="leadingMargin" constant="25" id="bhi-ic-MM9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pDV-Ij-2KA" secondAttribute="trailing" constant="25" id="xGA-ei-aqe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" id="yHJ-zT-kLf"/>
+                    <connections>
+                        <outlet property="slider" destination="pDV-Ij-2KA" id="2yV-k3-dFW"/>
+                        <outlet property="textViewHeight" destination="WYV-mP-GNl" id="CpD-Pu-NRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieX-hQ-ZuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
