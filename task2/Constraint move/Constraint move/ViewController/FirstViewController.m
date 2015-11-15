@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *labelWidth;
 
 @end
 
@@ -16,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.slider.maximumValue = self.view.frame.size.width;
     // Do any additional setup after loading the view.
 }
 
@@ -23,6 +26,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)changeLabelWidth:(id)sender {
+    self.labelWidth.constant = self.slider.maximumValue - self.slider.value;
+}
+
+
 
 /*
 #pragma mark - Navigation
